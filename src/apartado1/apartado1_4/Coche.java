@@ -1,4 +1,4 @@
-package clasesComunes;
+package apartado1.apartado1_4;
 
 public class Coche {
 	private String nombre;

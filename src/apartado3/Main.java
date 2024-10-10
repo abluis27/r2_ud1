@@ -1,5 +1,4 @@
 package apartado3;
-import clasesComunes.Coche;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
@@ -42,7 +41,7 @@ public class Main {
 
     private static Coche reconstruirCoche(NodeList cocheXML) {
         Element elementoCoche = (Element) cocheXML.item(0);
-        String nombre = elementoCoche.getElementsByTagName("nombre").item(0).getTextContent();
+        String nombre = elementoCoche.getElementsByTagName("nombreAlias").item(0).getTextContent();
         String modelo = elementoCoche.getElementsByTagName("modelo").item(0).getTextContent();
         int cv = Integer.parseInt(elementoCoche.getElementsByTagName("cv").item(0).getTextContent());
         return new Coche(nombre, modelo, cv);

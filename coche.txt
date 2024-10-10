@@ -1,5 +1,5 @@
 <Coche>
-  <nombre>Mercedes</nombre>
+  <nombreAlias>Mercedes</nombreAlias>
   <modelo>c220</modelo>
   <cv>170</cv>
 </Coche>

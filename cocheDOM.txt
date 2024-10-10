@@ -1,0 +1,5 @@
+<Coche>
+    <nombre>Mercedes</nombre>
+    <modelo>c220</modelo>
+    <cv>170</cv>
+</Coche>

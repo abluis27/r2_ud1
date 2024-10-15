@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
+
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 import com.thoughtworks.xstream.security.AnyTypePermission;
@@ -26,6 +27,8 @@ public class Ejercicio2 {
 		proveedor.setPais("España");
 		proveedor.setEsNacional("Importacion");
 		proveedor.setCp(28530);
+		proveedor.setEmpresa("Empresa");
+		proveedor.setCif("CIFFF");
 		XStream xstream = new XStream(new DomDriver());
 		xstream.addPermission(AnyTypePermission.ANY);
 		
@@ -36,6 +39,8 @@ public class Ejercicio2 {
 		proveedor.addCafe(cafe2);
 		xstream.alias("Proveedor", Proveedor.class);
 		xstream.alias("Cafe", Cafe.class);
+		xstream.aliasAttribute(Proveedor.class,"cif","cif");
+		xstream.aliasAttribute(Proveedor.class,"empresa","empresa");
 	
 		String proveedorEnviado= xstream.toXML(proveedor);
 		System.out.println(proveedorEnviado);
